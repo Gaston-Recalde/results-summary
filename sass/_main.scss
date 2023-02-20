@@ -1,0 +1,138 @@
+.result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    background-image: linear-gradient($light-slate-blue, $light-royal-blue);
+    padding: 1.5rem;
+    padding-bottom: 2.5rem;
+    border-radius: 0 0 2rem 2rem;
+
+    &__h1{
+        color: $light-lavender;
+        font-size: 1.2rem;
+        // margin-bottom: 1rem;
+    }
+
+    &__value{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 50%;
+        background-image: linear-gradient($violet-blue, $persian-blue);
+        width: 150px;
+        height: 150px;
+        // margin-bottom: 1rem;
+
+        &__span{
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: $white;
+        }
+
+        &__small{
+            color: $light-lavender;
+            font-weight: 700;
+        }
+    }
+
+    &__h2{
+        font-size: 1.5rem;
+    }
+
+    &__p{
+        font-size: 1rem;
+        max-width: 290px;
+        color: $light-lavender;
+    }
+}
+
+.summary{
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    // width: 80%;
+    padding: 1rem 2rem;
+    gap: 1rem;
+
+    &__h2{
+        // text-align: left;
+        color: $dark-gray-blue;
+        // margin: 1rem 0;
+        font-size: 18px;
+    }
+
+    &__values{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-direction: column;
+        // width: 86%;
+
+        &__value{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $light-red;
+            padding: 1rem;
+            // gap: 1rem;
+            background-color: $light-red-2;
+            border-radius: .5rem;
+
+            .logo-value{
+                display: flex;
+                gap: 1rem;
+                font-weight: 700;
+
+                // .logo{
+
+                // }
+    
+                .value{
+                    font-size: 1rem;
+                }
+            }
+
+            .values{
+                color: $light-lavender;
+                font-weight: 700;
+
+                span{
+                    color: $dark-gray-blue;
+                }
+            }
+        }
+
+        &__value-yellow{
+            color: $orangey-yellow;
+            background-color: $orangey-yellow-2;
+        }
+
+        &__value-green{
+            color: $green-teal;
+            background-color: $green-teal-2;
+        }
+
+        &__value-blue{
+            color: $cobalt-blue;
+            background-color: $cobalt-blue-2;
+        }
+    }
+
+    &__button{
+        color: $white;
+        font-size: 16px;
+        border-radius: 50px;
+        border: none;
+        background-color: $dark-gray-blue;
+        padding: 1rem;
+
+        &:hover{
+            cursor: pointer;
+            background-image: linear-gradient($light-slate-blue, $light-royal-blue);
+        }
+    }
+}
