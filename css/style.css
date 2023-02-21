@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -14,16 +15,11 @@ body {
   color: hsl(0deg, 0%, 100%);
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+.component {
+  display: flex;
+  flex-direction: column;
 }
-
-.attribution a {
-  color: hsl(228deg, 45%, 44%);
-}
-
-.result {
+.component .result {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,11 +30,11 @@ body {
   padding-bottom: 2.5rem;
   border-radius: 0 0 2rem 2rem;
 }
-.result__h1 {
+.component .result__h1 {
   color: hsl(241deg, 100%, 89%);
   font-size: 1.2rem;
 }
-.result__value {
+.component .result__value {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,42 +44,41 @@ body {
   width: 150px;
   height: 150px;
 }
-.result__value__span {
+.component .result__value__span {
   font-size: 3.5rem;
   font-weight: 800;
   color: hsl(0deg, 0%, 100%);
 }
-.result__value__small {
+.component .result__value__small {
   color: hsl(241deg, 100%, 89%);
   font-weight: 700;
 }
-.result__h2 {
+.component .result__h2 {
   font-size: 1.5rem;
 }
-.result__p {
+.component .result__p {
   font-size: 1rem;
   max-width: 290px;
   color: hsl(241deg, 100%, 89%);
 }
-
-.summary {
+.component .summary {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 1rem 2rem;
   gap: 1rem;
 }
-.summary__h2 {
+.component .summary__h2 {
   color: hsl(224deg, 30%, 27%);
   font-size: 18px;
 }
-.summary__values {
+.component .summary__values {
   display: flex;
   gap: 1rem;
   justify-content: center;
   flex-direction: column;
 }
-.summary__values__value {
+.component .summary__values__value {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,34 +87,34 @@ body {
   background-color: hsla(0deg, 100%, 67%, 0.1);
   border-radius: 0.5rem;
 }
-.summary__values__value .logo-value {
+.component .summary__values__value .logo-value {
   display: flex;
   gap: 1rem;
   font-weight: 700;
 }
-.summary__values__value .logo-value .value {
+.component .summary__values__value .logo-value .value {
   font-size: 1rem;
 }
-.summary__values__value .values {
+.component .summary__values__value .values {
   color: hsl(241deg, 100%, 89%);
   font-weight: 700;
 }
-.summary__values__value .values span {
+.component .summary__values__value .values span {
   color: hsl(224deg, 30%, 27%);
 }
-.summary__values__value-yellow {
+.component .summary__values__value-yellow {
   color: hsl(39deg, 100%, 56%);
   background-color: hsla(39deg, 100%, 56%, 0.1);
 }
-.summary__values__value-green {
+.component .summary__values__value-green {
   color: hsl(166deg, 100%, 37%);
   background-color: hsla(166deg, 100%, 37%, 0.1);
 }
-.summary__values__value-blue {
+.component .summary__values__value-blue {
   color: hsl(234deg, 85%, 45%);
   background-color: hsla(234deg, 85%, 45%, 0.1);
 }
-.summary__button {
+.component .summary__button {
   color: hsl(0deg, 0%, 100%);
   font-size: 16px;
   border-radius: 50px;
@@ -127,7 +122,44 @@ body {
   background-color: hsl(224deg, 30%, 27%);
   padding: 1rem;
 }
-.summary__button:hover {
+.component .summary__button:hover {
   cursor: pointer;
   background-image: linear-gradient(hsl(252deg, 100%, 67%), hsl(241deg, 81%, 54%));
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .component {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .component .result {
+    min-width: 350px;
+    border-radius: 2rem;
+    gap: 2.8rem;
+    font-size: 1.8rem;
+  }
+  .component .result__value__small {
+    font-size: 1rem;
+  }
+  .component .result__p {
+    max-width: 230px;
+  }
+  .component .summary {
+    min-width: 350px;
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+  .component .summary__values {
+    margin-bottom: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
